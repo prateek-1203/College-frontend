@@ -1,26 +1,20 @@
 import {
   createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
+  RouterProvider
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import Login from "./Features/auth/components/Login";
-import SignUp from "./Features/auth/components/SignUp";
+import InvoiceList from "./pages/InvoiceList";
+
 
 const router=createBrowserRouter([
   {
     path:"/",
-    element:<HomePage></HomePage>
+    element:<HomePage/>
   },
-   {
-     path:"/login",
-     element:<Login></Login>
-   },
-   {
-    path:"/signup",
-    element:<SignUp></SignUp>
-  }
+  {
+    path: "/invoices",
+    element: <InvoiceList />
+  },
 ])
 
 function App() {
